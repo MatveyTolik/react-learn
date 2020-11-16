@@ -1,17 +1,15 @@
 import React from 'react';
-import First from './components/First';
-import Second from './components/Second';
-import Third from './components/Third';
-import Forth from './components/Forth';
+import Header from './components/Header';
+import Navigation from './components/Navigation';
+import MoviesList from './components/MoviesList';
+import './style.css';
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello World</h1>
-      <First />
-      <Second />
-      <Third />
-      <Forth />
+      <Header />
+      <Navigation />
+      <MoviesList />
     </div>
   );
 }

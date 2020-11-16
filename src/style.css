@@ -1,0 +1,85 @@
+.App {
+  background: black;
+  margin: auto;
+  width: 80%;
+}
+
+header {
+  width: 100%;
+  height: 500px;
+  background: gray;
+}
+
+header .add-movie {
+  margin-left: 1200px;
+  margin-top: 50px;
+  width: 180px;
+  height: 50px;
+}
+
+header button h2 {
+  margin: 0;
+}
+
+header textarea {
+  width: 749px;
+  height: 50px;
+  left: 400px;
+  position: absolute;
+  top: 225px;
+}
+header .search {
+  left: 1250px;
+  position: absolute;
+  top: 225px;
+  width: 200px;
+  height: 55px;
+  background: red;
+}
+
+.navigation {
+
+  list-style-type: none;
+  display: inline-flex;
+}
+
+.navigation li {
+  margin-right: 20px;
+}
+
+.sort {
+  display: inline-block;
+  margin-left: 500px;
+}
+
+.movie-list {
+  /*display: flex;*/
+}
+
+.film-item {
+  text-align: center;
+  margin: auto;
+  display: inline-block;
+  width: 30%;
+}
+
+.film-item .image {
+  width: 314px;
+  height: 458px;
+  display: block;
+  text-align: center;
+  margin: auto;
+}
+
+.film-item .title {
+  display: inline-block;
+  width: 290px;
+}
+
+.film-item .year {
+  display: inline-block;
+}
+
+.film-item .description {
+  margin-bottom: 50px;
+}
