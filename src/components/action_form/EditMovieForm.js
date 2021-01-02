@@ -7,9 +7,9 @@ export default class EditMovieForm extends React.Component {
 
   render() {
     return (
-      <form className={'add-movie-form'}>
+      <form className={'movie-form'}>
         <input type="button" name="close" value="X" className={'close'}/>
-        <label className={'form-title'}>ADD MOVIE:</label>
+        <label className={'form-title'}>EDIT MOVIE:</label>
         <label className={'field-title'}>TITLE</label>
         <input type="text"/>
         <label className={'release-date'}>RELEASE DATE</label>

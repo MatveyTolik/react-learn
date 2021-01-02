@@ -1,158 +1,211 @@
 .App {
-    background: black;
-    margin: auto;
-    width: 80%;
-    color: white;
+  background: black;
+  margin: auto;
+  width: 80%;
+  color: white;
 }
 
 label, input, select {
-    display: block;
-    margin: 10px 50px;
+  display: block;
+  margin: 10px 50px;
 }
 
 header {
-    width: 100%;
-    height: 500px;
-    background: gray;
+  width: 100%;
+  height: 500px;
+  background: gray;
 }
 
 header .add-movie {
-    margin-left: 1200px;
-    margin-top: 50px;
-    width: 180px;
-    height: 50px;
+  /*display: none;*/
+
+  margin-left: 1200px;
+  margin-top: 50px;
+  width: 180px;
+  height: 50px;
 }
 
 header button h2 {
-    margin: 0;
+  /*display: none;*/
+
+  margin: 0;
 }
 
 header textarea {
-    width: 749px;
-    height: 50px;
-    left: 400px;
-    position: absolute;
-    top: 225px;
+  /*display: none;*/
+
+  width: 749px;
+  height: 50px;
+  left: 400px;
+  position: absolute;
+  top: 225px;
 }
 
 header .search {
-    left: 1250px;
-    position: absolute;
-    top: 225px;
-    width: 200px;
-    height: 55px;
-    background: red;
+  /*display: none;*/
+  left: 1250px;
+  position: absolute;
+  top: 225px;
+  width: 200px;
+  height: 55px;
+  background: red;
+}
+
+header .movies-detail div {
+  display: inline-block;
+}
+
+header .movies-detail .image-block {
+  float: left;
+  width: 25%;
+}
+
+header .movies-detail .image {
+  margin: 60px;
+}
+
+header .movies-detail .search-button {
+  position: absolute;
+  right: 300px;
+  top: 25px;}
+
+header .movies-detail .movie-information {
+  display: inline-block;
+  width: 65%;
+  margin-top: 50px;
+
+}
+
+header .movies-detail .title {
+  font-size: 30px;
+
+}
+
+header .movies-detail .rating {
+  position: absolute;
+  top: 85px;
+  margin-left: 300px;
+}
+
+header .movies-detail .year {
+  margin-right: 50px;
+}
+
+header .movies-detail .description {
+  margin-top: 30px;
 }
 
 .navigation {
 
-    list-style-type: none;
-    display: inline-flex;
+  list-style-type: none;
+  display: inline-flex;
 }
 
 .navigation li {
-    margin-right: 20px;
+  margin-right: 20px;
 }
 
 .sort {
-    display: inline-block;
-    margin-left: 500px;
+  display: inline-block;
+  margin-left: 500px;
 }
 
 .movie-list {
-    /*display: flex;*/
+  /*display: flex;*/
 }
 
 .film-item {
-    text-align: center;
-    margin: auto;
-    display: inline-block;
-    width: 30%;
+  text-align: center;
+  margin: auto;
+  display: inline-block;
+  width: 30%;
 }
 
 .film-item .actions {
-    background: grey;
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    transform: rotate(90deg);
-    border-radius: 15px;
-    margin-left: 340px;
-    margin-top: 30px;
+  background: grey;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  transform: rotate(90deg);
+  border-radius: 15px;
+  margin-left: 340px;
+  margin-top: 30px;
 }
 
 .film-item .image {
-    width: 314px;
-    height: 458px;
-    display: block;
-    text-align: center;
-    margin: auto;
+  width: 314px;
+  height: 458px;
+  display: block;
+  text-align: center;
+  margin: auto;
 }
 
 .film-item .title {
-    display: inline-block;
-    width: 290px;
+  display: inline-block;
+  width: 290px;
 }
 
 .film-item .year {
-    display: inline-block;
+  display: inline-block;
 }
 
 .film-item .description {
-    margin-bottom: 50px;
+  margin-bottom: 50px;
 }
 
 
-.add-movie-form, .delete-movie-form {
-    /*display: none;*/
-    position: absolute;
-    width: 500px;
-    background-color: #232323;
-    margin-left: 500px;
-    z-index: 10;
+.movie-form, .delete-movie-form {
+  /*display: none;*/
+  position: absolute;
+  width: 500px;
+  background-color: #232323;
+  margin-left: 500px;
+  z-index: 10;
 }
 
-.add-movie-form {
-    color: #F65261;
+.movie-form {
+  color: #F65261;
 }
 
-.add-movie-form .close, .delete-movie-form .close {
-    margin-left: 450px;
-    margin-top: 25px;
+.movie-form .close, .delete-movie-form .close {
+  margin-left: 450px;
+  margin-top: 25px;
 }
 
-.add-movie-form .form-title {
-    margin-top: 50px;
-    margin-left: 100px;
-    font-size: 30px;
+.movie-form .form-title {
+  margin-top: 50px;
+  margin-left: 100px;
+  font-size: 30px;
 }
 
-.add-movie-form input[type=button], .add-movie-form input[type=submit] {
-    display: inline-block;
+.movie-form input[type=button], .movie-form input[type=submit] {
+  display: inline-block;
 }
 
 .delete-movie-form {
-    width: 500px;
-    background: #424242;
-    position: absolute;
-    height: 250px;
+  width: 500px;
+  background: #424242;
+  position: absolute;
+  height: 250px;
 }
 
 .delete-movie-form .close {
-    margin-left: 450px;
+  margin-left: 450px;
 }
 
 .delete-movie-form .form-title {
-    margin-top: 20px;
-    font-size: 30px;
+  margin-top: 20px;
+  font-size: 30px;
 }
 
 .delete-movie-form .field-title {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .delete-movie-form .submit {
-    margin-top: 20px;
-    margin-left: 350px;
-    background-color: #F65261;
+  margin-top: 20px;
+  margin-left: 350px;
+  background-color: #F65261;
 }
+
+
