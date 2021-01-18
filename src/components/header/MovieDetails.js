@@ -1,29 +1,20 @@
-import React, { useState, useEffect, useCallback } from 'react'
-import { movies } from '../properties/movies';
-import image from "../images/Kill_Bill_Volume_2.png";
+import React from 'react'
+import {store} from "../../App";
 
 export default function MovieDetails() {
+  const movies = store.getState().movies[0];
 
-  const [headerDisplay, setHeaderDisplay] = useState('header');
-
-  const consoleMessage = useCallback((movies) => {
-    console.log(movies[0]);
-  }, []);
-
-  useEffect(() =>  {
-    consoleMessage(movies)
-  }, [consoleMessage]);
   return (
     <>
       <div className="movies-detail">
-        <button className={'search-button'} onClick={() => setHeaderDisplay('header')}>Search</button>
-        <div className={'image-block'}><img src={image} alt='alt' className={'image'}/></div>
+        <button className={'search-button'}>Search</button>
+        <div className={'image-block'}><img src={movies.img_url} alt='alt' className={'image'}/></div>
         <div className={'movie-information'}>
-          <h2 className={'title'}>{movies[0].title}</h2>
-          <div className={'rating'}>{movies[0].rating}</div>
-          <div className={'year'}>{movies[0].year}</div>
-          <div className={'duration'}>{movies[0].duration}</div>
-          <div className={'description'}>{movies[0].about}</div>
+          <h2 className={'title'}>{movies.title}</h2>
+          <div className={'rating'}>{movies.rating}</div>
+          <div className={'year'}>{movies.year}</div>
+          <div className={'duration'}>{movies.duration}</div>
+          <div className={'description'}>{movies.about}</div>
         </div>
       </div>
     </>

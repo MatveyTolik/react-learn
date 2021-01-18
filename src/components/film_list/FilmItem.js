@@ -1,17 +1,30 @@
-import React from 'react'
-import image from '../images/Kill_Bill_Volume_2.png'; // with import
+import React, {Component} from 'react'
+import {updateMovie} from "../../actions/movie_action";
+import {bindActionCreators} from "redux";
+import {connect} from "react-redux";
 
-export default function FilmItem({props}) {
-
-  return (
-
-    <div className="film-item">
-      <div className={'actions'}>...</div>
-      <img src={image} alt='alt' className={'image'}/>
-      <h2 className={'title'}>{props.title}</h2>
-      <div className={'year'}>{props.year}</div>
-      <div className={'description'}>{props.description}</div>
-    </div>
-  );
+function mapStateToProps(state) {
+  return {
+    movies: state.movies
+  }
 }
 
+function matchDipatchToProps(dispatch) {
+  return bindActionCreators({updateMovie: updateMovie}, dispatch)
+}
+
+class FilmItem extends Component {
+
+  render() {
+    return (
+      <div className="film-item">
+        <div className={'actions'}>...</div>
+        <img src={this.props.movie.img_url} alt='alt' className={'image'}/>
+        <h2 className={'title'}>{this.props.movie.title}</h2>
+        <div className={'year'}>{this.props.movie.year}</div>
+        <div className={'description'}>{this.props.movie.description}</div>
+      </div>
+    );
+  }
+}
+export default connect(mapStateToProps, matchDipatchToProps)(FilmItem);

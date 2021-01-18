@@ -62,6 +62,8 @@ header .movies-detail .image-block {
 
 header .movies-detail .image {
   margin: 60px;
+  width: 300px;
+  height: 400px;
 }
 
 header .movies-detail .search-button {
