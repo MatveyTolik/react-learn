@@ -10,7 +10,7 @@ export default function AddMovie() {
         <h2>ADD MOVIE</h2>
       </button>
       {display && (
-        <AddMovieForm/>
+        <AddMovieForm display={display} setDisplay={setDisplay}/>
       )}
     </>
   )

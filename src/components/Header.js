@@ -5,7 +5,7 @@ import Search from './header/Search';
 
 
 export default function Header() {
-  const [details] = useState(true);
+  const [details] = useState(false);
 
   return (
     <header>

@@ -10,6 +10,7 @@ const initialState = {
 function moviesReducers(state = initialState.movies, action) {
   switch (action.type) {
     case ADD_MOVIE:
+      console.log(state)
       return state.concat([action.payload]);
     case DELETE_MOVIE:
       return state.filter( item => item !== action.movie );
