@@ -2,31 +2,21 @@ import React, {Component} from 'react'
 import {connect} from "react-redux";
 
 function mapStateToProps(state) {
-  return  {
-    movie: state.active
+  return {
+    movies: state.movies
   }
 }
 
 class Details extends Component {
-  showList () {
-    return this.props.movies.map ((movie) => {
-      return (
-        <li onClick={() => this.props.select (movie)} key={movie.id}>{movie.title}</li>
-      );
-    });
-  }
-
   render() {
-    if(!this.props.movie) {
-      return (<p>hello</p>);
-    }
+    let movie = this.props.movies[this.props.id];
     return (
       <div>
-        <h2>{this.props.movie.title}</h2>
-        <img src={this.props.movie.img_url} alt={'buu'}/>
-        <p>{this.props.movie.description}</p>
-        <p>{this.props.movie.rating}</p>
-        <p>{this.props.movie.year}</p>
+        <h2>{movie.title}</h2>
+        <img src={movie.img_url} alt={'alt'}/>
+        <p>{movie.description}</p>
+        <p>{movie.rating}</p>
+        <p>{movie.year}</p>
       </div>
     )
   }
