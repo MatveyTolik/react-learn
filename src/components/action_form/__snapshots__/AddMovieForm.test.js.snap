@@ -1,0 +1,118 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot to AddMovieForm 1`] = `
+<form
+  className="movie-form"
+>
+  <input
+    className="close"
+    name="close"
+    type="button"
+    value="X"
+  />
+  <label
+    className="form-title"
+  >
+    ADD MOVIE:
+  </label>
+  <label
+    className="field-title"
+  >
+    TITLE
+  </label>
+  <input
+    name="title"
+    onBlur={[Function]}
+    onChange={[Function]}
+    type="text"
+    value=""
+  />
+  <label
+    className="release-date"
+  >
+    RELEASE DATE
+  </label>
+  <input
+    name="release_date"
+    onBlur={[Function]}
+    onChange={[Function]}
+    type="date"
+    value=""
+  />
+  <label
+    className="movie-url"
+  >
+    MOVIE URL
+  </label>
+  <input
+    name="movie_url"
+    onBlur={[Function]}
+    onChange={[Function]}
+    type="text"
+    value=""
+  />
+  <label
+    className="genre"
+  >
+    GENRE
+  </label>
+  <select
+    name="genre"
+  >
+    <option
+      value="Val1"
+    >
+      Val 1
+    </option>
+    <option
+      value="Val2"
+    >
+      Val 2
+    </option>
+    <option
+      value="Val2"
+    >
+      Val 3
+    </option>
+  </select>
+  <label
+    className="overview"
+  >
+    OVERVIEW
+  </label>
+  <input
+    name="overview"
+    onBlur={[Function]}
+    onChange={[Function]}
+    type="text"
+    value=""
+  />
+  <label
+    className="runtime"
+  >
+    RUNTIME
+  </label>
+  <input
+    name="runtime"
+    onBlur={[Function]}
+    onChange={[Function]}
+    type="text"
+    value=""
+  />
+  <button
+    className="reset"
+    name="reset"
+    type="reset"
+  >
+    Reset
+  </button>
+  <button
+    className="submit"
+    disabled={false}
+    onClick={[Function]}
+    type="submit"
+  >
+    Submit
+  </button>
+</form>
+`;
